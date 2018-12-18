@@ -1,1 +1,28 @@
-https://exmnpsi.herokuapp.com/
+Heroku URL: https://exmnpsi.herokuapp.com/
+
+Modelo de examen: F
+
+// Añadir los hosts permitidos
+
+// Añadir la apliacion a la lista de aplicaciones
+
+// Añadir configuracion de directorios
+// Añadir el directorio de templates a 'TEMPLATES'
+
+
+// SUSTITUIR databases por:
+DATABASES={}
+if os.getenv('SQLITE',False):
+    DATABASES['default'] = {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+else:
+    import dj_database_url
+DATABASES['default']= dj_database_url.config(default='postgres://alumnodb:alumnodb@localhost:5432/examen')
+
+/// projecto/urls.py
+
+// Añadir imports.
+
+//Añadir url
