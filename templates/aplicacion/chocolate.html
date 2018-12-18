@@ -1,0 +1,20 @@
+<html>
+    <head>
+    </head>
+    <body>
+        {% if error %}
+            {{error}}
+        {% endif %}
+
+        Ingredientes del chocolate {{nombreC}} con identificador 1001
+
+        <table>
+            {% for ingrediente in ingredientes %}
+            <tr>
+                <td>{{ingrediente.id}}</td>
+                <td>{{ingrediente.nombreI}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
